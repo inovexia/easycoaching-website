@@ -1,0 +1,15 @@
+@media only screen and (max-width: 767px) {
+  .content-pos {
+    left: unset;
+    top: unset;
+    transform: unset;
+    max-width: unset;
+    width: auto;
+    position: unset;
+  }
+  .content-layout .order-first {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: unset !important;
+    order: unset !important;
+  }
+}

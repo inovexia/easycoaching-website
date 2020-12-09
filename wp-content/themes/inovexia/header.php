@@ -20,7 +20,7 @@
 
 <body id="app-container" class="<?php body_class(); ?> vertical boxed ltr rounded menu-default main-hidden sub-hidden ">
 
-	<nav class="navbar navbar-expand-md px-3 px-md-4 px-lg-5 bg-white">
+	<nav class="navbar navbar-expand-lg px-3 px-md-4 px-lg-5 bg-white">
 		<div class="container">
 			<?php 
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -37,14 +37,15 @@
 				}
 			?>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+			<i class="fa fa-bars" aria-hidden="true"></i>
+
 			</button>
 			
 			<div class="navbar-collapse bg-transparent pt-md-0 p-3 p-md-0 collapse" id="main-menu" style="z-index:99;">
 				<?php wp_nav_menu( array(
 				'theme_location' => 'Main Menu', 
 				'container' => 'ul', 
-				'menu_class' => 'navbar-nav mr-auto cs1-text-secondary', 
+				'menu_class' => 'navbar-nav mr-auto mx-lg-auto', 
 				'menu_id' => false, 
 				'link_class'=> 'nav-item ', 
 				'walker' => new learningAppWalker()

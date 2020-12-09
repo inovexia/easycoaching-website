@@ -4,18 +4,19 @@
 		<div class="bg-dark py-5">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 col-lg-3 text-md-left text-center text-white pl-0 pl-md-3 pl-lg-4">
+				<div class="col-12 col-md-6 col-lg-3 text-left text-white">
 						<?php dynamic_sidebar( 'footer-widget-1' ); ?>
 					</div>
-					<div class="col-md-6 col-lg-3 text-md-left text-center text-white footer-quick-links">
+					<div class="col-12 col-md-6 col-lg-3 text-left text-white">
 						<?php dynamic_sidebar( 'footer-widget-2' ); ?>
 					</div>
-					<div class="col-md-6 col-lg-3 text-md-left text-center text-white">
+					<div class="col-12 col-md-6 col-lg-3 text-left text-white">
 						<?php dynamic_sidebar( 'footer-widget-3' ); ?>
 					</div>
-					<div class="col-md-6 col-lg-3 text-md-left text-center text-white">
+					<div class="col-12 col-md-6 col-lg-3 text-left text-white">
 						<?php dynamic_sidebar( 'footer-widget-4' ); ?>
 					</div>
+					
 				</div>
 			</div>
 			<?php do_action('upper_footer'); ?>

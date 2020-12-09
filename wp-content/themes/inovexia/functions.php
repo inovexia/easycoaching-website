@@ -26,4 +26,26 @@ foreach ($include_files as $handler => $file) {
         include $file;
     }
 }
+function convertYoutube($string) {
+	return preg_replace(
+		"/\s*[a-zA-Z\/\/:\.]*youtu(be.com\/watch\?v=|.be\/)([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i",
+		"//www.youtube.com/embed/$2",
+		$string
+	);
+}
+
+if( function_exists('acf_add_options_page') ) { 
+    acf_add_options_page(array(
+      'page_title'  => 'Theme Settings',
+      'menu_title'  => 'Theme Settings',
+      'menu_slug'   => 'theme-settings',
+      'capability'  => 'edit_posts',
+      'redirect'    => false
+    ));
+    acf_add_options_sub_page(array(
+      'page_title'  => 'Social Links',
+      'menu_title'  => 'Social Links',
+      'parent_slug' => 'theme-settings',
+    )); 
+  }
 

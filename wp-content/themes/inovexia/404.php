@@ -6,7 +6,7 @@
 				<h1 class="text-display-4 title-404">404</h1> 
 				<h2 class="">Oops! Page Not Found</h2> 
 				<h5 class="m-0 py-3">Sorry, but the page you were trying to view does not exist.</h5>
-				<a href="<?php echo home_url(); ?>" class="btn btn-primary btn-lg mt-5" title="Go back to Homepage"><i class="fa fa-home"></i> Go To Homepage</a>
+				<a href="<?php echo home_url(); ?>" class="btn btn-outline-default btn-rounded waves-effect" title="Go back to Homepage"><i class="fa fa-home"></i> Go To Homepage</a>
 			</div>
 		</div>
 	</div>

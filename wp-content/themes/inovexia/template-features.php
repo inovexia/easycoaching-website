@@ -74,8 +74,8 @@ get_header();
 	 <div class="row mb-2 justify-content-center text-center py-5" >
 	   <div class="col-md-12 " >
        <h3 class="pb-5"><?php echo the_field('demo_section_title','option'); ?></h3>
-		 <a href="<?php echo the_field('demo_button_1_link','option'); ?>" class="btn btn-outline-primary btn-lg ml-2"><?php echo the_field('demo_button_1_text','option') ?></a>
-		 <a href="<?php echo the_field('demo_button_2_link','option'); ?>" class="btn btn-outline-primary btn-lg ml-2" target="_blank"><?php echo the_field('demo_button_2_text','option') ?></a>
+		 <a href="<?php echo the_field('demo_button_1_link','option'); ?>" class="btn btn-outline-default btn-rounded waves-effect"><?php echo the_field('demo_button_1_text','option') ?></a>
+		 <a href="<?php echo the_field('demo_button_2_link','option'); ?>" class="btn btn-outline-default btn-rounded waves-effect" target="_blank"><?php echo the_field('demo_button_2_text','option') ?></a>
          </div>
 	 </div>
 	</div>

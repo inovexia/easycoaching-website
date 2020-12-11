@@ -7,19 +7,18 @@ jQuery(document).ready(function () {
 });
 
 jQuery(document).ready(function () {
-  var videoSrc;
-  jQuery(".video-btn").click(function () {
+  jQuery(".banner-video-btn").click(function () {
     var videoSrc = jQuery(this).data("src");
+    jQuery(".embed-responsive-item").attr("src", videoSrc);
   });
-  console.log(videoSrc);
 
-  jQuery("#myModal").on("shown.bs.modal", function (e) {
-    jQuery("#video").attr(
-      "src",
-      videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
-    );
-  });
-  jQuery("#myModal").on("hide.bs.modal", function (e) {
-    jQuery("#video").attr("src", videoSrc);
-  });
+  // jQuery("#myModal").on("shown.bs.modal", function (e) {
+  //   jQuery("#video").attr(
+  //     "src",
+  //     videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
+  //   );
+  // });
+  // jQuery("#myModal").on("hide.bs.modal", function (e) {
+  //   jQuery("#video").attr("src", videoSrc);
+  // });
 });

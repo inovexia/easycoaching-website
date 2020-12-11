@@ -1,7 +1,7 @@
     </main>
 
     <footer class="page-footer pt-0">
-		<div class="bg-dark py-5">
+		<div class="py-5" style="background-color:#100f1f">
 			<div class="container">
 				<div class="row">
 				<div class="col-12 col-md-6 col-lg-3 text-left text-white">
@@ -22,7 +22,7 @@
 			<?php do_action('upper_footer'); ?>
 		</div>
 
-		<div id="bottom-footer" class="bg-dark py-2">
+		<div id="bottom-footer" class="py-2" style="background-color:#100f1f; border-top:1px solid rgba(255,255,255,0.1);">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-white text-center pt-4" >

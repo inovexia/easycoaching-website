@@ -18,7 +18,7 @@
 
 </head>
 
-<body id="app-container" class="<?php body_class(); ?> vertical boxed ltr rounded menu-default main-hidden sub-hidden ">
+<body id="app-container" <?php body_class(); ?> >
 
 	<nav class="navbar navbar-expand-lg px-3 px-md-4 px-lg-5 bg-white">
 		<div class="container">
@@ -53,7 +53,7 @@
 				?>
 				<span class="navbar-text">
 					
-					<a href="https://apexcoachings.com/login-register/" class="apex-default-btn">
+					<a href="#" class="btn btn-outline-default btn-rounded waves-effect">
 					    <i class="fa fa-user"></i> Sign-In<span style=""></span> 
 					</a>
 				</span>
@@ -79,8 +79,8 @@
 				$icon = "fa fa-graduation-cap";
 			}else if(is_singular('resource')){
 				$icon = get_field('icon');
-			}else if(is_page('blogs')||is_single()){
-				$icon = "fa fa-blog";
+			// }else if(is_page('blogs')||is_single()){
+			// 	$icon = "fa fa-blog";
 			}else if(is_page('contact-us')){
 				$icon = "simple-icon-phone";
 			}else if(is_404()){
@@ -99,15 +99,15 @@
 				$pageTitle = get_the_title() . " Details";
 			}else if(is_singular('resource')){
 				$pageTitle = get_the_title();
-			}else if(is_single()){
-				$pageTitle = "Blogs";
+			// }else if(is_single()){
+			// 	$pageTitle = "Blogs";
 			}else if(is_404()){
 				$pageTitle = "Page not found";
 			}else{
 				$pageTitle = get_the_title();
 			}
 			?>
-				<div class="row bg-primary">
+				<div class="row bg-color-new">
 					<div class="col-12">
 						<div class="container">
 							<div class="py-3 m-0">

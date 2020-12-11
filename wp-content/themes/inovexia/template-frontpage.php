@@ -20,7 +20,18 @@ $upload_dir = wp_get_upload_dir ();
             <div class="col-12 col-md-6">
             <div class="banner-right-image">
                 <img src="<?php echo the_field('right_image'); ?>" alt="" />
+				<button type="button" class="banner-video-btn play-icon video-btn" data-toggle="modal" data-src="<?php echo convertYoutube("www.youtu.be/nju43FxNBTI"); ?>" data-target="#playVideo">
+                                  <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </button>
             </div>
+			<div class="card shadow border-dark d-none">
+					<video width="100%" height="315" controls controlsList="nodownload" disablePictureInPicture poster="<?php echo the_field('right_image'); ?>">
+					  Your browser does not support the video tag. 
+					  <button type="button" class="play-icon video-btn" data-toggle="modal" data-src="<?php echo convertYoutube("www.youtu.be/nju43FxNBTI"); ?>" data-target="#playVideo">
+                                  <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </button>
+					</video>
+				</div>
             </div>
         </div>
        
@@ -30,13 +41,14 @@ $upload_dir = wp_get_upload_dir ();
 
 <!-- section 2 start -->
 <section class="py-5" style="background-color:<?php echo the_field('section_2_background_color'); ?>">
-<div class="container pt-0 py-lg-4">
-<div class="row">
-<div class="col-12 text-center">
-<p class="lead text-center text-white m-0"><?php echo the_field('section_2_text'); ?></p>
-</div>
-</div>
-</div>
+	<div class="container pt-0 py-lg-4">
+		<div class="row">
+			<div class="col-12 text-center">
+				<p class="lead text-center text-white m-0"><?php echo the_field('section_2_text'); ?></p>
+			</div>
+		</div>
+		
+	</div>
 </section>
 <!-- section 2 end -->
 <!--Features Section 1 -->
@@ -79,8 +91,9 @@ $upload_dir = wp_get_upload_dir ();
 	 <div class="row mb-2 justify-content-center text-center py-5" >
 	   <div class="col-md-12 " >
 		 <h3 class="mb-3 mb-lg-5"><?php echo the_field('more_feature_title'); ?></h3>
-		 <a href="<?php echo the_field('more_feature_button_link'); ?>" class="btn btn-primary btn-lg "><?php echo the_field('more_feature_button_text'); ?></a>
-	   </div>
+		
+		 <a href="<?php echo site_url();?>/features" class="btn btn-outline-default btn-rounded waves-effect"><?php echo the_field('more_feature_button_text'); ?></a>
+		</div>
 	 </div>
 	</div>
 </section>
@@ -122,9 +135,10 @@ $upload_dir = wp_get_upload_dir ();
 	 <div class="row mb-2 justify-content-center text-center py-5" >
 	   <div class="col-md-12 " >
 		 <h3 class="pb-5"><?php echo the_field('cta_section_title'); ?></h3>
-		 <a href="<?php echo the_field('cta_button_1_link'); ?>" class="btn btn-outline-primary btn-lg ml-2"><?php echo the_field('cta_button_1_text') ?></a>
-		 <a href="<?php echo $upload_dir['baseurl'] . '/easylms/easylmsbrochure.pdf'; ?>" class="btn btn-outline-primary btn-lg ml-2" target="_blank"><?php echo the_field('cta_button_2_text') ?></a>
-	   </div>
+		 
+		 <a href="<?php echo the_field('cta_button_1_link'); ?>" class="btn btn-outline-default btn-rounded waves-effect"><?php echo the_field('cta_button_1_text') ?></a>
+		 <a href="<?php echo $upload_dir['baseurl'] . '/easylms/easylmsbrochure.pdf'; ?>" class="btn btn-outline-default btn-rounded waves-effect"><?php echo the_field('cta_button_2_text') ?></a>
+		</div>
 	 </div>
 	</div>
 </section>
@@ -132,62 +146,35 @@ $upload_dir = wp_get_upload_dir ();
 
 
 
-<div class="container">
-    <h1>Play YouTube or Vimeo Videos in Bootstrap 4 Modal</h1>
-  
-  
- <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-  Play Video 1 - autoplay
-</button>
-  
-   <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/IP7uGKgJL8U" data-target="#myModal">
-  Play Video 2
-</button>
-  
-  
-   <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/A-twOC3W558" data-target="#myModal">
-  Play Video 3
-</button>
-  
-  
-     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://player.vimeo.com/video/58385453?badge=0" data-target="#myModal">
-  Play Vimeo Video
-</button>
+<section class="py-5">
+    
+
+
+   
+   
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-
-      
-      <div class="modal-body">
-
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>        
-        <!-- 16:9 aspect ratio -->
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-</div>
-        
-        
+    <div class="modal fade video-modal-box" id="playVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>        
+            <!-- 16:9 aspect ratio -->
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+            </div>  
+          </div>
+        </div>
       </div>
-
-    </div>
-  </div>
-</div> 
-  
-  
-  
-</div>
+    </div> 
+ <!-- Modal Close -->
 
 
 
 
+</section>
 
 
 <?php get_footer(); ?>

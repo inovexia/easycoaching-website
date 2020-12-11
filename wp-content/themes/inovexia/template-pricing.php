@@ -91,7 +91,7 @@ get_header();
                             <div class="price">
                                 <h4 class="p-0 m-0"><?php echo the_field('enterprise_plan_price') ?></h4>
                             </div>
-                            <a href="/contact-us" class="btn btn-block btn-outline-primary" type="submit">Contact Us</a>
+                            <a href="/contact-us" class="btn btn-block btn-outline-default btn-rounded waves-effect" type="submit">Contact Us</a>
                         </div>
                     </div>
                 </div>
